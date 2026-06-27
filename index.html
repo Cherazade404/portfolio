@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherazade EL KARROUMI — DevOps & Perf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="starfield"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-prefix">~/</span><span class="nav-name">cherazade</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#terminal">terminal</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">&gt;_ system online — orbit established</div>
+      <h1 class="hero-title">
+        <span class="hero-name">Cherazade<br>EL KARROUMI</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-label">ROLE</span>
+        <span class="role-text" id="typedRole"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Apprentie Tests de Performance & DevOps chez <strong class="hl">Groupama G2S</strong>.
+        Master Informatique — Systèmes, Réseaux & Sécurité · Lyon 1.
+        Passionnée d'infrastructure, d'automatisation et… de l'espace.
+      </p>
+      <div class="hero-actions">
+        <a href="#terminal" class="btn btn-primary">Ouvrir le terminal</a>
+        <a href="#experience" class="btn btn-ghost">Voir mon parcours</a>
+      </div>
+      <div class="hero-langs">
+        <span class="lang-chip">🇫🇷 Français</span>
+        <span class="lang-chip">🇬🇧 Anglais</span>
+        <span class="lang-chip">🇨🇳 Chinois</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Planet -->
+      <div class="planet-scene">
+        <div class="orbit-ring orbit-ring-1">
+          <div class="orbit-dot orbit-dot-1"></div>
+        </div>
+        <div class="orbit-ring orbit-ring-2">
+          <div class="orbit-dot orbit-dot-2"></div>
+        </div>
+        <div class="planet-wrapper">
+          <div class="planet-ring"></div>
+          <div class="planet-body">
+            <div class="planet-crater c1"></div>
+            <div class="planet-crater c2"></div>
+            <div class="planet-crater c3"></div>
+          </div>
+        </div>
+        <div class="planet-label">Systèmes · Réseaux · Sécurité</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TERMINAL -->
+  <section id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 00</span>
+        <h2 class="section-title">Terminal interactif</h2>
+        <p class="section-sub">Explorez mon profil via la ligne de commande. Tapez <kbd>help</kbd> pour commencer.</p>
+      </div>
+      <div class="terminal-window terminal-interactive" id="terminalWindow">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">cherazade@devops:~ — portfolio shell</span>
+        </div>
+        <div class="terminal-output" id="termOutput"></div>
+        <div class="terminal-input-row">
+          <span class="t-prompt-full">cherazade@devops<span class="t-at">:</span><span class="t-dir">~</span><span class="t-dollar">$</span></span>
+          <input
+            type="text"
+            id="termInput"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="tapez une commande..."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">À propos</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Je suis apprentie ingénieure chez <strong class="hl">Groupama G2S</strong> (Ecully),
+            où j'interviens sur des missions de <strong class="hl">tests de performance</strong> :
+            élaboration de stratégies de charge, développement de scénarios, pilotage d'exécutions
+            et reporting technique & fonctionnel.
+          </p>
+          <p>
+            Avant ça, j'ai réalisé un stage chez <strong class="hl">Constellium</strong> (Neuf-Brisach)
+            en informatique industrielle — j'y ai développé un service <strong class="hl">.NET 8 / C#</strong>
+            collectant des données machines via <strong class="hl">OPC UA/DA</strong>, les transmettant en
+            <strong class="hl">MQTT</strong> avec un buffer <strong class="hl">SQLite</strong> anti-coupure réseau,
+            et créé des dashboards <strong class="hl">Grafana</strong> temps réel.
+          </p>
+          <p>
+            Tutrice en informatique (C++, Réseaux, OCaml) et ambassadrice étudiante à
+            <strong class="hl">l'Université Lyon 1</strong> — j'aime transmettre autant que coder.
+          </p>
+          <div class="about-badges">
+            <span class="badge">DevOps</span>
+            <span class="badge">Test de performance</span>
+            <span class="badge">Réseaux & Sécurité</span>
+            <span class="badge">Informatique industrielle</span>
+            <span class="badge">Space enthusiast</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="sys-monitor">
+            <div class="sys-header"><span class="sys-icon">⬡</span> system_info.cfg</div>
+            <div class="sys-row"><span class="sys-key">hostname</span><span class="sys-val">cherazade-el-karroumi</span></div>
+            <div class="sys-row"><span class="sys-key">role</span><span class="sys-val hl-cyan">Apprentie DevOps / PerfTest</span></div>
+            <div class="sys-row"><span class="sys-key">company</span><span class="sys-val">Groupama G2S · Ecully</span></div>
+            <div class="sys-row"><span class="sys-key">education</span><span class="sys-val">Master SRS · Lyon 1</span></div>
+            <div class="sys-row"><span class="sys-key">location</span><span class="sys-val">Lyon, France</span></div>
+            <div class="sys-row"><span class="sys-key">languages</span><span class="sys-val">FR · EN · ZH</span></div>
+            <div class="sys-row"><span class="sys-key">status</span><span class="sys-val t-green">● en alternance</span></div>
+            <div class="sys-row"><span class="sys-key">uptime</span><span class="sys-val" id="uptime">...</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (no percentages) -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">Compétences</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#00d4ff"></span>
+            <h3 class="cat-title">DevOps & CI/CD</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-cyan">GitLab CI</span>
+            <span class="stag stag-cyan">Docker</span>
+            <span class="stag stag-cyan">Git</span>
+            <span class="stag stag-cyan">OpenStack</span>
+            <span class="stag stag-cyan">Node-RED</span>
+            <span class="stag stag-cyan">NeoLoad</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#a855f7"></span>
+            <h3 class="cat-title">Monitoring & Observabilité</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-purple">Grafana</span>
+            <span class="stag stag-purple">Dynatrace</span>
+            <span class="stag stag-purple">Prometheus</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#22c55e"></span>
+            <h3 class="cat-title">Langages de programmation</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-green">Python</span>
+            <span class="stag stag-green">C</span>
+            <span class="stag stag-green">C++</span>
+            <span class="stag stag-green">C# (.NET 8)</span>
+            <span class="stag stag-green">JavaScript</span>
+            <span class="stag stag-green">SQL</span>
+            <span class="stag stag-green">PowerShell</span>
+            <span class="stag stag-green">Bash</span>
+            <span class="stag stag-green">OCaml</span>
+            <span class="stag stag-green">Java</span>
+            <span class="stag stag-green">PHP</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#f59e0b"></span>
+            <h3 class="cat-title">Réseaux & Systèmes</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-yellow">Linux</span>
+            <span class="stag stag-yellow">Unix</span>
+            <span class="stag stag-yellow">Windows</span>
+            <span class="stag stag-yellow">Cisco IOS</span>
+            <span class="stag stag-yellow">Wireshark</span>
+            <span class="stag stag-yellow">OPC UA</span>
+            <span class="stag stag-yellow">OPC DA</span>
+            <span class="stag stag-yellow">MQTT</span>
+            <span class="stag stag-yellow">CCNA 1</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#ef4444"></span>
+            <h3 class="cat-title">Bases de données</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-red">MariaDB</span>
+            <span class="stag stag-red">SQLite</span>
+            <span class="stag stag-red">phpMyAdmin</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="cat-header">
+            <span class="cat-dot" style="--c:#64748b"></span>
+            <h3 class="cat-title">Outils & Environnements</h3>
+          </div>
+          <div class="tag-cloud">
+            <span class="stag stag-muted">VSCode</span>
+            <span class="stag stag-muted">Vim</span>
+            <span class="stag stag-muted">Node.js</span>
+            <span class="stag stag-muted">Jupyter</span>
+            <span class="stag stag-muted">Unity</span>
+            <span class="stag stag-muted">NetBeans</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Expérience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot tl-dot-cyan"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Apprentie Ingénieure Tests de Performance DevOps</h3>
+                <div class="tl-company">Groupama G2S · Ecully, Auvergne-Rhône-Alpes</div>
+              </div>
+              <span class="tl-date">Sept. 2025 — Présent</span>
+            </div>
+            <ul class="tl-list">
+              <li>Élaboration de stratégies de tests de performance avec les équipes projets</li>
+              <li>Développement des scripts de scénarios de tests</li>
+              <li>Pilotage de l'exécution des tests selon le modèle de charge défini</li>
+              <li>Mise en évidence des résultats avec les experts techniques et fonctionnels</li>
+              <li>Production de reporting clair et précis des tests</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">NeoLoad</span><span class="tag">Dynatrace</span><span class="tag">Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot tl-dot-purple"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Stagiaire Informatique Industrielle — Mesure & Régulations</h3>
+                <div class="tl-company">Constellium · Neuf-Brisach, Grand Est</div>
+              </div>
+              <span class="tl-date">Avr. — Août 2025</span>
+            </div>
+            <ul class="tl-list">
+              <li>Développement d'un service <strong>.NET 8 / C#</strong> collectant les données machines via <strong>OPC UA & OPC DA</strong>, transmises en <strong>MQTT</strong> avec buffer <strong>SQLite</strong> anti-perte réseau</li>
+              <li>Création de dashboards <strong>Grafana</strong> pour visualiser en temps réel l'état des machines et les données bobines</li>
+              <li>Remontée des données de consommation énergétique de l'UAP FD6</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">C# / .NET 8</span><span class="tag">OPC UA/DA</span><span class="tag">MQTT</span><span class="tag">SQLite</span><span class="tag">Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot tl-dot-green"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Tutrice en Informatique</h3>
+                <div class="tl-company">Université Claude Bernard Lyon 1</div>
+              </div>
+              <span class="tl-date">Sept. 2024 — Août 2025</span>
+            </div>
+            <ul class="tl-list">
+              <li>Enseignement sur les UEs de C++, Réseaux et OCaml</li>
+              <li>Accompagnement aux méthodes de programmation récursive</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">C++</span><span class="tag">Réseaux</span><span class="tag">OCaml</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot tl-dot-muted"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Ambassadrice Étudiante</h3>
+                <div class="tl-company">Université Claude Bernard Lyon 1</div>
+              </div>
+              <span class="tl-date">Sept. 2023 — Présent</span>
+            </div>
+            <ul class="tl-list">
+              <li>Accompagnement des étudiants dans leurs démarches d'orientation</li>
+              <li>Présence dans les salons et lycées pour informer sur Lyon 1</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">Formation</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card fade-in">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>Master Informatique — Systèmes, Réseaux & Sécurité</h3>
+            <div class="edu-school">Université Claude Bernard Lyon 1</div>
+            <div class="edu-date">Sept. 2025 — Présent</div>
+          </div>
+          <span class="edu-badge current">En cours</span>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-icon">📡</div>
+          <div class="edu-body">
+            <h3>CCNA 1 — Introduction aux Réseaux</h3>
+            <div class="edu-school">Cisco Networking Academy</div>
+            <div class="edu-date">Sept. — Déc. 2024</div>
+          </div>
+          <span class="edu-badge done">Certifié</span>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-icon">💻</div>
+          <div class="edu-body">
+            <h3>Licence Informatique</h3>
+            <div class="edu-school">Université Claude Bernard Lyon 1</div>
+            <div class="edu-date">Jan. 2023 — Août 2025</div>
+          </div>
+          <span class="edu-badge done">Obtenue</span>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-icon">⚗️</div>
+          <div class="edu-body">
+            <h3>Licence Physique, Chimie & Sciences de l'Ingénieur</h3>
+            <div class="edu-school">Université Claude Bernard Lyon 1</div>
+            <div class="edu-date">Sept. 2020 — Jan. 2023</div>
+          </div>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-icon">🀄</div>
+          <div class="edu-body">
+            <h3>Certification de compétences en mandarin</h3>
+            <div class="edu-school">华东理工大学 (ECUST)</div>
+            <div class="edu-date">Juin — Juil. 2018</div>
+          </div>
+          <span class="edu-badge done">Certifié</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>Une opportunité, un projet collaboratif, ou juste envie d'échanger sur le DevOps, les réseaux ou l'espace ?</p>
+          <p>Je réponds sous 24h.</p>
+          <div class="contact-links">
+            <a href="mailto:cherazade.el-karroumi@etu.univ-lyon1.fr" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>cherazade.el-karroumi@etu.univ-lyon1.fr</span>
+            </a>
+            <a href="https://linkedin.com/in/" class="contact-item" target="_blank" rel="noopener">
+              <span class="contact-icon">in</span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Cherazade404" class="contact-item" target="_blank" rel="noopener">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <div class="mailto-box">
+          <p class="mailto-desc">Cliquez ci-dessous pour m'envoyer un email directement depuis votre client mail.</p>
+          <a href="mailto:cherazade.el-karroumi@etu.univ-lyon1.fr?subject=Contact depuis le portfolio" class="btn btn-primary btn-mailto">
+            ✉ Envoyer un email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-text"><span class="t-cyan">~/</span>cherazade — DevOps & PerfTest</span>
+        <span class="footer-copy">Lyon · France · 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
